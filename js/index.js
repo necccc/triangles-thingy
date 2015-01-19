@@ -93,7 +93,6 @@ function open () {
 
 	var meshCounter;
 	meshCounter = setInterval(function () {
-			console.log(Mesh.opened );
 		if (Mesh.opened >= 90) {
 			setTimeout(onOpened, 1000);
 			clearInterval(meshCounter);
@@ -107,7 +106,7 @@ function onOpened () {
 	var i = 0;
 	for (; i < 90 ; i++) {
 		setTimeout(function () {
-			Mesh.units[this].opened = false;
+			Mesh.units[this].opening = false;
 			Mesh.units[this].reset();
 		}.bind(i), i*20);
 	}
