@@ -1,0 +1,158 @@
+
+
+
+.bu {
+	position: absolute;
+	display: block;
+	width: 71px;
+	height: 71px;
+	margin: -35px 0 0 -35px;
+
+	/*background-color: rgba(0,0,0,.03);*/
+}
+
+.bu i {
+	width: 2px;
+	height: 2px;
+	background-color: #000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -1px 0 0 -1px;
+}
+
+.bu .sq {
+	position: relative;
+
+	width: 100%;
+	height: 100%;
+
+}
+
+.bu.typeA .sq {
+	transform: rotate(45deg);
+
+
+	background-color: rgba(0,0,0,.04);
+}
+.bu.typeB .sq {
+	transform: rotate(-45deg);
+
+	background-color: rgba(0,0,0,.04);
+}
+
+
+.bu .sq .tri1,
+.bu .sq .tri2 {
+	position: absolute;
+	backface-visibility: visible;
+}
+
+.bu .sq .tri2 {
+	top: 0;
+	right: 0;
+}
+
+.bu .sq .tri1 {
+	left: 0;
+	bottom: 0;
+}
+
+.bu.spin1 .sq .tri1 {
+	transform-origin: bottom left;
+	-webkit-animation: spinning-svg-tri1 1s;
+}
+
+.bu.spin2 .sq .tri2 {
+	transform-origin: center center;
+	-webkit-animation: spinning-svg-tri2 1.5s;
+}
+
+.bu .sq svg polygon {
+	box-shadow: 0 0 2px #fff;
+}
+
+.bu.spin1 .sq svg.tri1 polygon,
+.bu.spin2 .sq svg.tri2 polygon {
+	-webkit-animation: spinning-color 1s ease-in-out .2s;
+}
+
+
+
+@-webkit-keyframes spinning-svg-tri1 {
+	from {
+		transform: rotate3d(-1,1, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(-1,1, 0, -180deg);
+	}
+}
+
+
+
+@-webkit-keyframes spinning-svg-tri2 {
+	from {
+		transform: rotate3d(-1,1, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(-1,1, 0, 180deg);
+	}
+}
+
+
+@-webkit-keyframes open-svg-tri1 {
+	from {
+		transform: rotate3d(-1,1, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(-1,1, 0, 90deg);
+	}
+}
+
+
+
+@-webkit-keyframes open-svg-tri2 {
+	from {
+		transform: rotate3d(-1,1, 0, 0deg);
+	}
+	to {
+		transform: rotate3d(-1,1, 0, -90deg);
+	}
+}
+
+@-webkit-keyframes spinning-color {
+	from {
+		fill: #fff;
+		stroke: #fff;
+	}
+	50% {
+		fill: #f0f0f0;
+		stroke: #efefef;
+	}
+	60% {
+		fill: #fff;
+	}
+	to {
+		fill: #fff;
+		stroke: #fff;
+	}
+}
+
+
+.open1.bu .sq,
+.open2.bu .sq {
+	background-color: rgba(255,255,255,0);
+}
+.open1 .sq svg.tri1 {
+	-webkit-animation: open-svg-tri1 1.5s;
+	transform: rotate3d(-1,1, 0, 90deg);
+}
+.open2 .sq svg.tri2 {
+	-webkit-animation: open-svg-tri2 1.5s;
+	transform: rotate3d(-1,1, 0, 90deg);
+}
+
+.open1 .sq polygon,
+.open2 .sq polygon {
+	-webkit-animation: spinning-color 1s ease-in-out .2s;
+}
