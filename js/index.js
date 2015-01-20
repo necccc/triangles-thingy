@@ -55,7 +55,7 @@ function start () {
 
 function filled () {
 	$('#Logo').removeClass('hide');
-	randomSpinInterval = setInterval(randomSpin, 2)
+	randomSpinInterval = setInterval(randomSpin, 50);
 }
 
 
@@ -87,14 +87,14 @@ function open () {
 		var elem = toOpen.splice(i, 1);
 		
 		setTimeout(function () {this.open(1)}.bind(elem[0]), k*20);
-		setTimeout(function () {this.open(2)}.bind(elem[0]), k*23);
+		setTimeout(function () {this.open(2)}.bind(elem[0]), k*33);
 
 	}
 
 	var meshCounter;
 	meshCounter = setInterval(function () {
 		if (Mesh.opened >= 90) {
-			setTimeout(onOpened, 1000);
+			setTimeout(onOpened, 2000);
 			clearInterval(meshCounter);
 		}
 	}, 20);
