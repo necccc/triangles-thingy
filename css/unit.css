@@ -33,12 +33,12 @@
 	transform: rotate(45deg);
 
 
-	background-color: rgba(0,0,0,.04);
+
 }
 .bu.typeB .sq {
 	transform: rotate(-45deg);
 
-	background-color: rgba(0,0,0,.04);
+
 }
 
 
@@ -72,9 +72,12 @@
 	box-shadow: 0 0 2px #fff;
 }
 
-.bu.spin1 .sq svg.tri1 polygon,
+.bu.spin1 .sq svg.tri1 polygon {
+	-webkit-animation: spinning-color 1s ease-in-out ;
+}
+
 .bu.spin2 .sq svg.tri2 polygon {
-	-webkit-animation: spinning-color 1s ease-in-out .2s;
+	-webkit-animation: spinning-color 1.5s ease-in-out;
 }
 
 
@@ -122,19 +125,19 @@
 
 @-webkit-keyframes spinning-color {
 	from {
-		fill: #fff;
-		stroke: #fff;
+		fill: #2e2e2e;
+		stroke: #2e2e2e;
 	}
 	50% {
-		fill: #f0f0f0;
-		stroke: #efefef;
+		fill: #4e4e4e;
+		stroke: #2e2e2e;
 	}
 	60% {
-		fill: #fff;
+		fill: #2e2e2e;
 	}
 	to {
-		fill: #fff;
-		stroke: #fff;
+		fill: #2e2e2e;
+		stroke: #2e2e2e;
 	}
 }
 

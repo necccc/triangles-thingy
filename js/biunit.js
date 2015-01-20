@@ -33,11 +33,11 @@ BiUnit.prototype.create = function () {
 		'<div class="sq">' +
 			'<svg class="tri1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"' +
 				'viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">' +
-				'<polygon fill="#ffffff" stroke="#ffffff" stroke-width="0.5" stroke-miterlimit="10" points="36,36 72,72 0,72 0,0 "/>' +
+				'<polygon fill="#2e2e2e" stroke="#2e2e2e" stroke-width="0.5" stroke-miterlimit="10" points="36,36 72,72 0,72 0,0 "/>' +
 			'</svg>' +
 			'<svg class="tri2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"' +
 				'viewBox="0 0 72 72" enable-background="new 0 0 72 72" xml:space="preserve">' +
-				'<polygon fill="#ffffff" stroke="#ffffff" stroke-width="0.5" stroke-miterlimit="10" points="36,36 0,0 72,0 72,72 "/>' +
+				'<polygon fill="#2e2e2e" stroke="#2e2e2e" stroke-width="0.5" stroke-miterlimit="10" points="36,36 0,0 72,0 72,72 "/>' +
 			'</svg>' +
 		'</div>' +
 	//'<i></i>' +

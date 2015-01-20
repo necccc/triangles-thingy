@@ -8,11 +8,16 @@ h1 {
 	color: #f3df49;
 }
 
+html, body {
+	background-color: #2e2e2e;
+}
+
 html, body, #Mesh {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+
 }
 
 #Pre {
